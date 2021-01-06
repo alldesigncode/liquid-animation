@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "liquid-menu-interaction"
+  "defaultProject": "liquid-menu-interaction",
+  "cli": {
+    "analytics": false
+  }
 }
