@@ -1,6 +1,4 @@
-import { animate, AnimationBuilder, style } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
-import { AnimationHelper, easeOutCubic } from './animationHelper';
+import { Component } from '@angular/core';
 import { gsap } from 'gsap';
 
 @Component({
@@ -33,19 +31,19 @@ export class AppComponent {
           delay: 0.3 * i,
           duration: 0.6,
         });
-
       }
     } else {
-      gsap.to(list, {
-        y: 0,
-        duration: 0.3,
-      }).then(() => {
-        gsap.to(menu, {
-          translateY: -80,
+      gsap
+        .to(list, {
+          y: 0,
           duration: 0.3,
+        })
+        .then(() => {
+          gsap.to(menu, {
+            translateY: -80,
+            duration: 0.3,
+          });
         });
-      })
-
     }
   }
 }
